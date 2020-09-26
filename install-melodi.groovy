@@ -6,7 +6,7 @@ properties([
 
 node {
     stage("Pull Repo"){
-        sh "rm -rf ansible-melodi && git clone https://github.com/ikambarov/ansible-melodi.git"
+        sh "'rm -rf ansible-melodi && git clone https://github.com/ismailyashar/scripted-pipeline.git'"
     }
 
     stage("Install Melodi"){
