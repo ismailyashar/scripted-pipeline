@@ -28,7 +28,7 @@ node("terraform"){
         withCredentials([usernamePassword(credentialsId: 'aws_jenkins_key', passwordVariable: 'AWS_SECRET_ACCESS_KEY', usernameVariable: 'AWS_ACCESS_KEY_ID')]) {
             stage("Terraform Init"){
                 sh """
-                    sh setenv.sh ${params.environment}.tfvars
+                    bash setenv.sh ${params.environment}.tfvars
                     terraform init 
                 """
             }
